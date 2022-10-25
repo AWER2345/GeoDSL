@@ -5,15 +5,10 @@
 ```
 /                # Root directory.
 |- docs/         # User documentation.
-|- milestones/   # Milestone related documents used throughout the project.
 |- user/         # .mg files that can be used for testing
 |- client/       # Our frontend client and VS Code client
 |- server/       # Our backend server for map generation (handles requests from frontend client), and our language server (handles requests from VS Code extension client)
 ```
-
-## Milestone Grading
-
-See milestones/MILESTONES.md
 
 ## User Documentation
 
@@ -33,8 +28,6 @@ See docs/UserDocumentation.md
 10. Click the tools icon in the top right corner of the file. This should open up a new window with the map that corresponds to the file you are currently editing. If you can not find the button, navigate to http://localhost:1337/ in your browser. If you make edits within any .mg file, just refresh the window - the map in the browser window will always display your last edited file.
 11. If the program gets stuck (ie syntax highlighting stops working, error messages out of date, etc), close the testing VS Code window, and repeat steps 
 
-## Grading Notes
-- Please see the end of docs/UserDocumentation.md for known bugs etc.
 
 ## Current Implementation VS. Desired Implementation
 Current implementation runs static checks and dynamic checks every single time a user makes a change. The entire document is passed back and forth. Then the document is written to a file, which is then read by the map server, which is then parsed YET AGAIN and then passed to the frontend for map generation. This whole process is unbelievably inefficient, and I am very much aware of that. I just dont have the time to adjust it.
